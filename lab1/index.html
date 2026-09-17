@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <!-- Встановлюємо кодування сторінки -->
+    <meta charset="UTF-8">
+
+    <!-- Налаштування кросплатформності для мобільних пристроїв -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Назва вкладки браузера -->
+    <title>Smart Notes — кросплатформний застосунок</title>
+
+    <!-- Підключення зовнішнього CSS-файлу -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Хедер сайту -->
+<header class="header">
+    <div class="container">
+        <h1>Smart Notes</h1>
+        <p>Кросплатформний застосунок для створення нотаток</p>
+    </div>
+</header>
+
+<!-- Основний вміст сторінки -->
+<main class="container main">
+    <!-- Секція з описом застосунку -->
+    <section class="card">
+        <h2>Про застосунок</h2>
+        <p>
+            Smart Notes — це навчальний приклад кросплатформного застосунку,
+            який працює у браузері на різних пристроях: комп’ютерах,
+            планшетах і смартфонах.
+        </p>
+
+        <p>
+            Для створення інтерфейсу використано HTML і CSS, а для взаємодії
+            з користувачем — JavaScript.
+        </p>
+    </section>
+
+    <!-- Секція з функціями застосунку -->
+    <section class="card">
+        <h2>Основні функції</h2>
+
+        <ul class="features-list">
+            <li>Створення коротких нотаток</li>
+            <li>Перегляд списку нотаток</li>
+            <li>Видалення окремих нотаток</li>
+            <li>Адаптивний інтерфейс</li>
+            <li>Робота у будь-якому сучасному браузері</li>
+        </ul>
+    </section>
+
+    <!-- Секція для додавання нотаток -->
+    <section class="card">
+        <h2>Додати нотатку</h2>
+
+        <!-- Поле введення нотатки -->
+        <input
+                type="text"
+                id="noteInput"
+                class="note-input"
+                placeholder="Введіть текст нотатки"
+        >
+
+        <!-- Кнопка для додавання нотатки -->
+        <button id="addNoteButton" class="button">
+            Додати нотатку
+        </button>
+
+        <!-- Повідомлення для користувача -->
+        <p id="message" class="message"></p>
+    </section>
+
+    <!-- Секція зі списком нотаток -->
+    <section class="card">
+        <h2>Список нотаток</h2>
+
+        <!-- Сюди JavaScript буде додавати нові нотатки -->
+        <ul id="notesList" class="notes-list"></ul>
+    </section>
+
+    <!-- Секція з вибором стека технологій -->
+    <section class="card">
+        <h2>Обраний стек технологій</h2>
+
+        <p>
+            Для цього прикладу використано WebView-підхід, оскільки застосунок
+            реалізовано за допомогою вебтехнологій і він може запускатися
+            у браузері або бути вбудованим у мобільний застосунок через WebView.
+        </p>
+
+        <table class="tech-table">
+            <thead>
+            <tr>
+                <th>Компонент</th>
+                <th>Технологія</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Структура сторінки</td>
+                <td>HTML</td>
+            </tr>
+            <tr>
+                <td>Оформлення</td>
+                <td>CSS</td>
+            </tr>
+            <tr>
+                <td>Логіка</td>
+                <td>JavaScript</td>
+            </tr>
+            <tr>
+                <td>Платформа запуску</td>
+                <td>Браузер / WebView</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<!-- Футер сторінки -->
+<footer class="footer">
+    <p>Лабораторна робота 1.2: Основи кросплатформності</p>
+</footer>
+
+<!-- Підключення JavaScript-файлу -->
+<script src="script.js"></script>
+</body>
+</html>

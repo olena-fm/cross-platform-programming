@@ -1,0 +1,216 @@
+/*
+  Базові стилі для всієї сторінки.
+  box-sizing: border-box допомагає коректно рахувати ширину елементів.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/* Загальні налаштування сторінки */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f5f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Контейнер обмежує ширину контенту на великих екранах */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Стилі для верхньої частини сторінки */
+.header {
+    background: linear-gradient(135deg, #2563eb, #14b8a6);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Заголовок у шапці */
+.header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+/* Опис у шапці */
+.header p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Основний блок сторінки */
+.main {
+    padding: 30px 0;
+}
+
+/* Картка для окремих секцій */
+.card {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Заголовки секцій */
+.card h2 {
+    margin-top: 0;
+    color: #1d4ed8;
+}
+
+/* Список функцій */
+.features-list {
+    padding-left: 20px;
+}
+
+/* Відступи між пунктами списку */
+.features-list li {
+    margin-bottom: 8px;
+}
+
+/* Поле введення нотатки */
+.note-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Стиль кнопки */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Зміна кольору кнопки при наведенні */
+.button:hover {
+    background-color: #1e40af;
+}
+
+/* Повідомлення для користувача */
+.message {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* Список нотаток */
+.notes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Окрема нотатка */
+.note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0f2fe;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* Текст нотатки */
+.note-text {
+    margin-right: 10px;
+}
+
+/* Кнопка видалення нотатки */
+.delete-button {
+    padding: 8px 12px;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Зміна кольору кнопки видалення при наведенні */
+.delete-button:hover {
+    background-color: #b91c1c;
+}
+
+/* Таблиця зі стеком технологій */
+.tech-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+/* Комірки таблиці */
+.tech-table th,
+.tech-table td {
+    border: 1px solid #cbd5e1;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Заголовок таблиці */
+.tech-table th {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* Футер сторінки */
+.footer {
+    text-align: center;
+    background-color: #111827;
+    color: white;
+    padding: 18px;
+    margin-top: 20px;
+}
+
+/*
+  Адаптивність для мобільних пристроїв.
+  Ці стилі застосовуються, якщо ширина екрана 600px або менше.
+*/
+@media (max-width: 600px) {
+    .header {
+        padding: 28px 0;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .note-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .delete-button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .tech-table th,
+    .tech-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
