@@ -13,6 +13,12 @@ const PORT = Number(process.env.PORT) || 3000;
 app.use(cors());
 app.use(express.json());
 
+// Логуємо кожен вхідний запит: метод і адресу
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.originalUrl}`);
+  next();
+});
+
 app.get("/", (req, res) => {
   res.send("Сервер працює!");
 });
