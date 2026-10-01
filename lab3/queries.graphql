@@ -1,0 +1,34 @@
+# Реєстрація користувача
+mutation {
+  register(name: "Іван Петренко", email: "ivan@example.com", password: "123456") {
+    token
+    user { id name email }
+  }
+}
+
+# Вхід користувача
+mutation {
+  login(email: "ivan@example.com", password: "123456") {
+    token
+    user { id name email }
+  }
+}
+
+# Захищений запит (додати заголовок Authorization: Bearer <token>)
+query {
+  me { id name email }
+}
+
+# Створення нотатки (теж потребує заголовка Authorization)
+mutation {
+  createNote(title: "Перша нотатка", text: "GraphQL + JWT") {
+    id
+    title
+    author { name }
+  }
+}
+
+# Список усіх нотаток
+query {
+  notes { id title text author { name } }
+}
