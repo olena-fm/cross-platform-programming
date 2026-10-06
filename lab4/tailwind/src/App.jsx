@@ -55,7 +55,7 @@ function App() {
   const doneCount = notes.filter((note) => note.done).length;
 
   return (
-    <div className="min-h-screen bg-slate-100 px-4 py-8 text-slate-800">
+    <div className="min-h-screen bg-emerald-50 px-4 py-8 text-slate-800">
       <main className="mx-auto max-w-3xl rounded-2xl bg-white p-6 shadow-lg">
         <Header total={notes.length} done={doneCount} />
         <NoteForm onAdd={addNote} />
@@ -63,8 +63,8 @@ function App() {
           <p
             className={
               message.type === "error"
-                ? "mb-4 font-bold text-red-500"
-                : "mb-4 font-bold text-green-600"
+                ? "mb-4 font-bold text-rose-600"
+                : "mb-4 font-bold text-emerald-700"
             }
           >
             {message.text}
