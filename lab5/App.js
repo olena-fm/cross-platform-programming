@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Alert, StatusBar, StyleSheet, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Alert, Platform, StatusBar, StyleSheet, View } from "react-native";
+import { SafeAreaProvider, useSafeAreaInsets } from "react-native-safe-area-context";
 import Header from "./components/Header";
 import NoteForm from "./components/NoteForm";
 import NoteList from "./components/NoteList";
 
-export default function App() {
+function Notes() {
+  const insets = useSafeAreaInsets();
   const [notes, setNotes] = useState([]);
 
   // Повертає true, якщо нотатку додано, і false, якщо текст порожній
@@ -43,20 +44,32 @@ export default function App() {
 
   const doneCount = notes.filter((note) => note.done).length;
 
+  // Відступ зверху: безпечна зона пристрою, але не менше 50 на iOS,
+  // щоб заголовок не потрапляв під смугу стану (час, Wi-Fi, батарея)
+  const topPadding = Math.max(insets.top, Platform.OS === "ios" ? 50 : 0);
+
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <View style={[styles.screen, { paddingTop: topPadding }]}>
       <StatusBar barStyle="dark-content" />
       <View style={styles.container}>
         <Header total={notes.length} done={doneCount} />
         <NoteForm onAdd={addNote} />
         <NoteList notes={notes} onToggle={toggleNote} onDelete={deleteNote} />
       </View>
-    </SafeAreaView>
+    </View>
+  );
+}
+
+export default function App() {
+  return (
+    <SafeAreaProvider>
+      <Notes />
+    </SafeAreaProvider>
   );
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
+  screen: {
     flex: 1,
     backgroundColor: "#eff6ff",
   },
