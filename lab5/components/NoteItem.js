@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   itemDone: {
-    backgroundColor: "#dcfce7",
+    backgroundColor: "#bbf7d0",
   },
   textArea: {
     flex: 1,
