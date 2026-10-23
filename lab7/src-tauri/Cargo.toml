@@ -1,0 +1,16 @@
+[package]
+name = "smart-notes-tauri"
+version = "1.0.0"
+description = "Десктопна версія застосунку Smart Notes на Tauri"
+edition = "2021"
+
+[lib]
+# Суфікс _lib потрібен, щоб назва бібліотеки не збігалася з назвою бінарного файлу (проблема на Windows)
+name = "smart_notes_tauri_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
