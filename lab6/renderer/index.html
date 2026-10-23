@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <title>Smart Notes Desktop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Smart Notes Desktop</h1>
+      <p>Десктопна версія застосунку для нотаток</p>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Додати нотатку</h2>
+        <input type="text" id="noteInput" class="note-input" placeholder="Введіть текст нотатки" />
+        <button id="addNoteButton" class="button">Додати нотатку</button>
+        <p id="message" class="message"></p>
+      </section>
+
+      <section class="card">
+        <h2>Список нотаток</h2>
+        <ul id="notesList" class="notes-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
