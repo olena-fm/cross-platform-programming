@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Notes Web</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Import map: пакет @smart-notes/core підключається за іменем, як і в Node.js -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@smart-notes/core": "/node_modules/@smart-notes/core/index.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Smart Notes Web</h1>
+      <p>Веб-версія застосунку для нотаток на спільному ядрі @smart-notes/core</p>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Додати нотатку</h2>
+        <input type="text" id="noteInput" class="note-input" placeholder="Введіть текст нотатки" />
+        <button id="addNoteButton" class="button">Додати нотатку</button>
+        <p id="message" class="message"></p>
+      </section>
+
+      <section class="card">
+        <h2>Список нотаток</h2>
+        <input type="search" id="searchInput" class="note-input" placeholder="Пошук за текстом" />
+        <ul id="notesList" class="notes-list"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "smart-notes-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Монорепозиторій Smart Notes: спільне ядро та клієнти (веб, десктоп)",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "npm test --workspaces --if-present",
+    "start:web": "npm start -w smart-notes-web",
+    "start:desktop": "npm start -w smart-notes-monorepo-desktop"
+  }
+}

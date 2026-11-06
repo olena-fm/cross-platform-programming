@@ -1,0 +1,14 @@
+{
+  "name": "@smart-notes/core",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Спільна платформонезалежна логіка застосунку Smart Notes",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "smart-notes-web",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Веб-клієнт Smart Notes: спільне ядро + адаптер localStorage",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@smart-notes/core": "*"
+  }
+}
